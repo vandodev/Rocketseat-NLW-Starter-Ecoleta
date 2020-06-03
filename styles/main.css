@@ -1,0 +1,124 @@
+:root{
+    --title-color:#916cdb;
+    --primary-color:#34cd79;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;   
+ }
+
+ body{
+     background: #fff0f5;
+     -webkit-font-smoothing:antialiased;
+ }
+
+ a{
+    text-decoration: none;
+ }
+
+ h1,h2,h3,h4,h5,h6{
+    font-family: 'Ubuntu', sans-serif;
+    color:var(--title-color);
+ }
+
+#page-home{
+    height: 100vh;
+    background:url("../icones/home-background.svg") no-repeat;
+    background-position: 35vw bottom;
+   }
+
+
+#page-home .content{
+    width: 90%;
+    height: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#page-home header{
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page-home header a{
+    display: flex;
+    color:var(--title-color);
+    font-weight: 700;
+}
+
+#page-home header a span{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    margin-right: 16px;
+    background-image: url(../icones/log-in.svg);
+}
+
+#page-home main{
+    max-width: 560px;
+    height: 600px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#page-home main h1{
+    font-size: 54px;
+}
+
+#page-home main p{
+    font-size: 24px;
+    line-height: 38px;
+    margin-top: 24px;
+}
+#page-home main a{
+    width: 100%;
+    max-width: 360px;
+    height: 72px;
+    border-radius:8px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    background: var(--primary-color);
+    transition: 400ms;
+    
+}
+
+#page-home main a:hover{
+    background-color: #2fb86e;
+}
+
+#page-home main a span{
+    width: 72px;
+    height: 72px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: rgba(0, 0, 0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-home main a span::after{
+    width: 20px;
+    height: 29px;
+    content: "";
+    background-image: url(../icones/search.svg);
+}
+#page-home main a strong{
+    flex: 1;
+    color: white;
+    text-align: center;
+}
+
