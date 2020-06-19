@@ -25,3 +25,80 @@
     display: flex;
     margin-right: 16px;
 }
+
+form{
+    max-width: 730px;
+    background-color: white;
+    margin: 80px auto;
+    padding: 64px;
+    border-radius: 8px;
+}
+
+form h1{
+    font-size: 36px;
+}
+
+form fieldset{
+    margin-top: 64px;
+    border: 0;
+}
+
+form legend{
+    margin-bottom: 40px;
+}
+
+form legend h2{
+    font-size: 24px;
+}
+
+form .field{
+    flex: 1;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 24px;
+}
+      
+form .field-group{
+    display: flex;
+}
+
+form input, form select{
+    background-color: #f0f0f0;
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 8px;
+}
+
+form select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+form .field-group .field + .field{
+    margin-left: 24px;
+}
+
+form button{
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0px;
+    margin-top: 40px;
+    transition: 400ms;
+}
+
+form button:hover{
+    background-color: #2fb86e;
+}
