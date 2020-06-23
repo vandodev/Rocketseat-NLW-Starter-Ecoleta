@@ -60,6 +60,29 @@ function getCities(event) {
 document
     .querySelector("select[name=uf]")
     .addEventListener("change", getCities) 
-    //.addEventListener("change", () => {
-//    console.log("Mudei")
-//})
+    /*
+    .addEventListener("change", () => {
+    console.log("Mudei")
+  })*/
+
+  //Itens de coleta
+//Pegar todos os li's
+
+const itemsToCollect = document.querySelectorAll(".items-grid li")
+for (const item of itemsToCollect){
+    
+    item.addEventListener("click", handleSelectedItem)
+}
+
+function handleSelectedItem(event){
+ // console.log(event.target)
+ // console.log(event.target.dataset.id)//Pega id
+  
+//Adicionar em remover classe com javascript
+const itemLi = event.target
+itemLi.classList.toggle("selected")
+
+const itemId = itemLi.dataset.id
+
+//console.log()
+}
