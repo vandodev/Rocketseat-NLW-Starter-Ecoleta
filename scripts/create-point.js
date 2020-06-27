@@ -65,14 +65,18 @@ document
     console.log("Mudei")
   })*/
 
-  //Itens de coleta
-//Pegar todos os li's
 
+//Itens de coleta
+//Pegar todos os li's
 const itemsToCollect = document.querySelectorAll(".items-grid li")
 for (const item of itemsToCollect){
     
     item.addEventListener("click", handleSelectedItem)
 }
+
+const collectedItems = document.querySelector("input[name=items]")
+
+let selectedItems = []
 
 function handleSelectedItem(event){
  // console.log(event.target)
@@ -83,6 +87,52 @@ const itemLi = event.target
 itemLi.classList.toggle("selected")
 
 const itemId = itemLi.dataset.id
+
+
+
+//Verificar se existem itens selecionados
+//se tiver pegar os itens selecionados
+
+//se ja estiver selecionado tirar da seleção 
+
+/* 
+  const alreadySelected = selectedItems.findIndex( function(item){
+  const itemFound = item == itemId
+  return itemFound
+})
+*/
+
+//Função resumida
+//const alreadySelected = selectedItems.findIndex(item => item == itemId
+
+const alreadySelected = selectedItems.findIndex( item=>{
+  const itemFound = item == itemId //Retorna true ou false
+  return itemFound
+})
+
+
+
+
+if(alreadySelected >=0){
+  //Remover da selção
+  const filteredItems = selectedItems.filter(item =>{
+    const itemIsDifferent = item != itemId
+    return itemIsDifferent
+  })
+
+  //console.log(filteredItems)
+  selectedItems = filteredItems
+} else{
+  //se não estiver selecionado adicionar a seleção
+  selectedItems.push(itemId)
+}
+
+//console.log(selectedItems)
+
+//Atualizar o campo escondodo com os itens selecionados
+collectedItems.value = selectedItems
+
+
 
 //console.log()
 }
