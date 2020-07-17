@@ -78,9 +78,9 @@
 
 #page-home main a span::after{
     width: 20px;
-    height: 29px;
+    height: 20px;
     content: "";
-    background-image: url(../icones/search.svg);
+    background-image: url(../icones/search.svg) ;
 }
 #page-home main a strong{
     flex: 1;

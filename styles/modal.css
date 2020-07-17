@@ -10,6 +10,7 @@
     transition: 400ms;
 } 
 
+
 #modal.hide{
     display: none;
 }
