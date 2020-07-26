@@ -3,6 +3,14 @@ const server = express()
 
 server.use(express.static("public"))
 
+//Templete engine
+const nunjucks = require("nunjucks")
+nunjucks.configure("src/views",{
+    express:server,
+    noCache:true
+})
+
+
 //Ligar o servidor
 server.listen(3000)
 
@@ -18,4 +26,4 @@ server.get("/create-point", (req, res) => {
 server.get("/search-results", (req, res) => {
     res.sendFile(__dirname + "/views/search-results.html")
 })
-search-results
+
