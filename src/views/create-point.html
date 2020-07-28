@@ -21,12 +21,21 @@
                     <h2>Dados da entidade</h2>
                 </legend>
 
-                <div class="field">
-                    <input type="text" name="name" required="required">
-                    <label for="name">Nome da entidade</label>
+                <div class="field-group">
+                    
+                    <div class="field">
+                        <input type="text" name="name" required="required" >
+                        <label for="name">Nome da entidade</label>
+                    </div>
+                    
+                    <div class="field">
+                        <input type="url" name="image" required="required" placeholder="http://">
+                        <label for="name">Imagem da eltidade</label>
+                    </div>
 
                 </div>
 
+            
                 <div class="field-group">
 
                     <div class="field">
@@ -68,7 +77,8 @@
 
         <fieldset>
             <legend>
-                <h2>Intems de coleta</h2>
+                <h2>Intens de coleta</h2>
+                <span>Selecione um ou mais itens abaixo</span>
             </legend>
 
             <div class="items-grid">
