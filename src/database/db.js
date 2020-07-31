@@ -5,7 +5,8 @@ const sqlite3 = require("sqlite3").verbose()
 const db = new sqlite3.Database("./src/database/databasedb")
 
 db.serialize(() =>{
-   
+
+//Cria tabela
 db.run(`
     CREATE TABLE IF NOT EXISTS places (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -19,6 +20,7 @@ db.run(`
     );
 `)
 
+//Inseri dados
 const query = `
 INSERT INTO places (
     image,
@@ -54,6 +56,18 @@ const values =  [
 
 //Não podemos utilizar arrow function por causa do this
 //db.run(query,values, err =>{
-db.run(query, values, afterInsertData)
+//db.run(query, values, afterInsertData)
+
+//Buscando dados
+db.all(`SELECT name FROM places`,function(err, row){
+//db.all(`SELECT * FROM places`,function(err, row){
+
+    if(err) {
+        return console.log(err)
+    }
+
+    console.log("Aqui estão seus registros")
+    console.log(row)
+})
 
 })
