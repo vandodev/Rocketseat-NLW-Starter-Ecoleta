@@ -70,4 +70,15 @@ db.all(`SELECT name FROM places`,function(err, row){
     console.log(row)
 })
 
+//Deletando dados
+//db.run(`DELETE FROM places`)//Deleta todos os dados
+
+db.run(`DELETE FROM places WHERE id = ?`, [1], function(err){
+    if(err) {
+        return console.log(err)
+    }
+
+    console.log("Registro deletado com sucesso")
+})
+
 })
